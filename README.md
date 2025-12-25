@@ -21,21 +21,6 @@ Using a **LangGraph** state machine, Jhonny visually analyzes reference images, 
 
 ---
 
-## 🛠️ Architecture
-
-The project is built on a **State Graph** using `LangGraph`:
-
-```mermaid
-graph TD
-    A[Start] --> B(Image Ingestion / Vision)
-    B --> C{Supervisor / Analyst}
-    C -- Missing Info --> D[Questioner Node]
-    D --> E[User Input]
-    E --> C
-    C -- Brief Complete --> F[Master Orchestrator]
-    F --> G[Delivery / Formatter]
-    G --> H[End]
-
 
 
 ⚙️ Installation & Setup
