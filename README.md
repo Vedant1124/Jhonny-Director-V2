@@ -37,18 +37,7 @@ graph TD
     G --> H[End]
 
 
-📂 Project Structure
-Bash
 
-├── app.py                 # Core Backend (LangGraph engine & logic)
-├── streamlit_app.py       # Frontend UI (Image upload & Chat interface)
-├── requirements.txt       # Python dependencies
-├── .env                   # API Keys (Groq, HuggingFace)
-└── data/                  # RAG Knowledge Base
-    ├── Engine/            # FAISS Index: Supervisor Rules
-    ├── Orchestrator/      # FAISS Index: Shot Logic & Physics
-    ├── Images/            # FAISS Index: Visual Grounding Data
-    └── A-N/               # FAISS Index: QA & Validation Rules
 ⚙️ Installation & Setup
 1. Clone the Repository
 Bash
