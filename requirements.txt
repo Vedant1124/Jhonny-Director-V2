@@ -1,0 +1,29 @@
+# Core Python
+python-dotenv==1.0.1
+
+# LLM + Agent Framework
+langchain==0.2.16
+langgraph==0.2.28
+langchain-community==0.2.16
+langchain-groq==0.1.9
+
+# Transformers & Vision
+transformers==4.44.2
+torch>=2.0.0
+accelerate>=0.30.0
+sentencepiece>=0.1.99
+
+# Vector Search
+faiss-cpu==1.8.0
+
+# Embeddings
+sentence-transformers==3.0.1
+
+# Utilities
+numpy>=1.26.0
+tqdm>=4.66.0
+pillow>=10.0.0
+requests>=2.32.0
+
+# Web App (if Streamlit used)
+streamlit>=1.37.0
