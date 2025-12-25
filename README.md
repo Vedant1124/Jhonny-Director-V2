@@ -1,3 +1,42 @@
+# 🎬 Director Jhonny: AI Cinematic Orchestrator
+
+**Director Jhonny** is an autonomous multi-agent system designed to act as a **Senior Creative Producer**. Unlike standard chatbots, Jhonny operates on a deterministic "Cinematic Physics" engine, strictly enforcing optical rules, lighting interactions, and platform-specific delivery standards (Netflix vs. Instagram).
+
+Using a **LangGraph** state machine, Jhonny visually analyzes reference images, conducts a structured technical interview, and orchestrates production-ready shot lists without "hallucinating" physically impossible shots.
+
+---
+
+## 🚀 Key Features
+
+* **👁️ Vision-Grounded Perception**: Uses **Salesforce BLIP** to "see" uploaded reference images, extracting lighting conditions, textures, and subjects to inform creative decisions.
+* **🧠 Multi-Agent Architecture**:
+    * **Supervisor Node**: The "Brain" that manages the state and identifies missing technical pillars (Lens, Platform, VFX, etc.).
+    * **Questioner Node**: The "Voice" that conducts a polite, sequential interview to fill gaps without overwhelming the user.
+    * **Orchestrator Node**: Applies 180M+ vector-embedded technical rules to generate the shot list.
+* **📐 Deterministic "Cinematic Physics"**:
+    * **Auto-Lens Logic**: Automatically maps emotions to focal lengths (e.g., *Tension* = 85mm, *Calm* = 35mm).
+    * **Lighting Physics**: Adjusts lighting descriptions based on lens choice (e.g., Wide lenses soften shadows; Telephoto deepens contrast).
+* **📦 Platform-Specific Delivery**: automatically configures aspect ratios, codecs, and color science for **Netflix (HDR, Rec.2020)** vs. **Instagram (9:16, High Contrast)**.
+* **🛡️ Zero-Gap Protocol**: The system refuses to generate output until all mandatory production pillars are defined or the user explicitly invokes the "Let Jhonny Decide" auto-mode.
+
+---
+
+## 🛠️ Architecture
+
+The project is built on a **State Graph** using `LangGraph`:
+
+```mermaid
+graph TD
+    A[Start] --> B(Image Ingestion / Vision)
+    B --> C{Supervisor / Analyst}
+    C -- Missing Info --> D[Questioner Node]
+    D --> E[User Input]
+    E --> C
+    C -- Brief Complete --> F[Master Orchestrator]
+    F --> G[Delivery / Formatter]
+    G --> H[End]
+
+
 📂 Project Structure
 Bash
 
